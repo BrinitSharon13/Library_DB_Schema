@@ -1,41 +1,46 @@
-# Library_DB_Schema
-# 📚 Library Database Schema
+This project is about designing a Library Management System using MySQL. It includes tables for books, members, categories, and book issues. The goal is to build a clean, relational database that helps track which member has which book and manage categories.
 
-This project defines a relational database schema for a Library Management System using MySQL.
+Tables Used
 
-## 📁 Tables
+Table	What It Stores
 
-| Table     | Description                          |
-|-----------|--------------------------------------|
-| Category  | Stores book categories               |
-| Book      | Stores book details and availability |
-| Member    | Stores member details                |
-| Issue     | Tracks issued and returned books     |
+Category	Different categories of books (e.g., Fiction, Science)
+Book	Book details like title, author, ISBN, and status
+Member	Member information like name, email, and phone
+Issue	Records of which book is issued to which member
 
-## 🔑 Relationships
+Relationships Between Tables:
 
-- Each **Book** belongs to one **Category**
-- Each **Issue** record links a **Book** to a **Member**
-- Each **Member** can have multiple **Issue** records
+Every book is linked to a category.
 
-## 🧱 ER Diagram
+Every issue record connects a book with a member.
 
-![ER Diagram](ER_Diagram.png)
+A member can borrow multiple books (many issues).
 
-## 🛠 Tools Used
+ER Diagram:
 
-- MySQL Workbench (Schema Design)
-- dbdiagram.io / Workbench EER Tool (ER Diagram)
-- GitHub (Project Hosting)
+Below is a diagram that shows how the tables are connected (relationships and keys):
 
-## 📂 Files
+📷 ER_Diagram.png (include this image file in your GitHub repo)
 
-- `schema.sql` — SQL script to create the database schema
-- `ER_Diagram.png` — Visual representation of the schema
-- `README.md` — This file
+Tools Used:
 
-## ✅ How to Use
+MySQL Workbench – for writing SQL and creating the database
 
-1. Run `schema.sql` in MySQL Workbench.
-2. The required tables will be created with relationships.
-3. Use `INSERT` queries to add your data.
+dbdiagram.io / Workbench EER Tool – to design the ER diagram
+
+GitHub – to store and share the project
+
+Files in This Project:
+
+schema.sql – SQL script to create all tables and relationships
+
+ER_Diagram.png – Diagram showing the structure of the database
+
+README.md – This file, which explains the project
+
+How to Use This Project:
+
+Open MySQL Workbench or any SQL tool.
+
+Run the schema.sql file to create the database tables.
